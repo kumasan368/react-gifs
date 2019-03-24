@@ -28,6 +28,13 @@ class App extends Component {
     });
   }
 
+  //  Here setState of selectedGifId above. selectedGif is defined in th giflistjsx.
+  selectedGif = (id) => {
+    this.setState({
+      selectedGifId: id
+    });
+  }
+
   render() {
     return (
       <div>
