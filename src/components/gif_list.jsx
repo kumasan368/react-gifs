@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import Gif from './gif';
 
 class GifList extends Component {
-  renderGifList = () => {
+  renderGifList = (props) => {
     // I can do implicit return here
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} />);
+    return {props.gifs.map(gif => <Gif id={gif.id} key={gif.id} selectedGif={props.selectedGif} />);}
   }
 
   render() {
