@@ -28,8 +28,8 @@ class App extends Component {
     });
   }
 
-  //  Here setState of selectedGifId above. selectedGif is defined in th giflistjsx.
-  selectedGif = (id) => {
+  //  Here setState of selectGifId above. selectedGif is defined in th giflistjsx.
+  selectGif = (id) => {
     this.setState({
       selectedGifId: id
     });
@@ -45,7 +45,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifs={this.state.gifs} selectFunction={this.selectedGif} />
+          <GifList gifs={this.state.gifs} selectGif={this.selectGif} />
         </div>
       </div>
     );
